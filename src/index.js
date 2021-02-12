@@ -3,7 +3,7 @@
 
 module.exports = function towelSort (matrix) {
 
-    if( ! matrix || matrix.length === 0 ) return [];
+    if( ! matrix  ) return [];
 
     let newMatrix = matrix.map( (item, index) => {
 
@@ -19,12 +19,6 @@ module.exports = function towelSort (matrix) {
 
    });
 
-   let result = newMatrix.join(',').split(',').map( (item) => {
-
-       return Number(item);
-
-   });
-
-  return result;
+  return newMatrix.flat();
 
 }
